@@ -53,7 +53,9 @@ public class PigLatin{
       while (line.hasNext()) {
         String a = line.next();
         System.out.print(pigLatinBest(a));
-        System.out.print(" ");
+        if (line.hasNext()){
+          System.out.print(" ");
+        }
       }
       System.out.print("\n");
     }
