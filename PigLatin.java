@@ -31,7 +31,7 @@ public class PigLatin{
   }
   public static String pigLatinBest(String s){
     String a = s.toLowerCase();
-    char b = s.charAt(0);
+    char b = a.charAt(0);
     if (!Character.isLetter(b)){
       return a;
     }
@@ -42,7 +42,7 @@ public class PigLatin{
         return (pigLatin(word) + last);
       }
       else{
-        return(pigLatin(s));
+        return(pigLatin(a));
       }
     }
   }
@@ -59,22 +59,5 @@ public class PigLatin{
     }
 
   }
-  // Scanner me = new Scanner(System.in);
-  // while (me.hasNextline()) {
-  //   Scanner line = new Scanner(me.nextLine());
-  //   while (line.hasNext()) {
-  //     String a = line.next();
-  //     a.toLowerCase();
-  //
-  //     String f = a.substring(0,1);
-  //     if (f.equals("a") ||f.equals("e") || f.equals("i") ||f.equals("0") ||f.equals("u") ||){
-  //       System.out.print(a + "hay");
-  //     }
-  //     else{
-  //       System.out.print(a.substring(1,a.length()) + f + "ay");
-  //     }
-  //     System.out.print(" ");
-  //   }
-  //   System.out.print("\n");
-  // }
+
 }
