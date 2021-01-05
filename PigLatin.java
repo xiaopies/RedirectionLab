@@ -27,8 +27,23 @@ public class PigLatin{
     else{
       return (a.substring(1,a.length()) + b + "ay");
     }
-
-
+  }
+  public static String pigLatinBest(String s){
+    String a = s.toLowerCase();
+    char b = s.charAt(0);
+    if (!Character.isLetter(b)){
+      return a;
+    }
+    else{
+      if (!Character.isLetter(a.charAt(a.length()-1))){
+        String last = a.substring(a.length()-1, a.length());
+        String word = a.substring(0, a.length()-1);
+        return (pigLatin(word) + last);
+      }
+      else{
+        return(pigLatin(s));
+      }
+    }
   }
   // Scanner me = new Scanner(System.in);
   // while (me.hasNextline()) {
